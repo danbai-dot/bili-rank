@@ -33,7 +33,7 @@ jobs:
           node-version: 20
 
       - name: Fetch Bilibili data
-        run: node scripts/fetch.mjs
+        run: node scripts/fetch.mjs || echo "Fetch failed; continuing with existing data."
 
       - name: Commit updated data
         run: |
@@ -58,4 +58,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
