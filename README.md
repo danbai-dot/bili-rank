@@ -1,6 +1,6 @@
 # B站角色每日人气榜
 
-一个会自动更新的小网站：每天从 B 站抓取 **爱莉希雅、昔涟、蕾米艾尔** 三个角色“当天发布”的视频，按播放量排出每人前 5 名，并统计三人总人气。
+一个会自动更新的小网站：每天从 B 站抓取 **爱莉希雅、昔涟、蕾米埃尔** 三个角色“当天发布”的视频，按播放量排出每人前 5 名，并统计三人总人气。
 
 - `index.html` 总览：三人总人气 + 历史记录
 - `ailixiya.html` / `xilian.html` / `leimiaier.html`：每个角色当天的 Top5 视频
@@ -13,7 +13,7 @@ site/                    网站页面（纯 HTML/CSS/JS）
   index.html             总览页
   ailixiya.html          爱莉希雅页
   xilian.html            昔涟页
-  leimiaier.html         蕾米艾尔页
+  leimiaier.html         蕾米埃尔页
   assets/style.css       样式
   assets/app.js          前端渲染逻辑
   data/latest.json       当日最新数据
@@ -47,3 +47,4 @@ node scripts/fetch.mjs
 - “当天”按中国时区（Asia/Shanghai）计算，只统计当天投稿的视频。
 - “前五名”按播放量从高到低；播放量相同则按发布时间新到旧。
 - “总人气” = 三个角色各自 Top5 播放量之和，每天统计一次。
+

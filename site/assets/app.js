@@ -1,7 +1,7 @@
 const CHAR_META = {
   ailixiya: { name: '爱莉希雅', page: 'ailixiya.html' },
   xilian: { name: '昔涟', page: 'xilian.html' },
-  leimiaier: { name: '蕾米艾尔', page: 'leimiaier.html' },
+  leimiaier: { name: '蕾米埃尔', page: 'leimiaier.html' },
 };
 const SLUGS = ['ailixiya', 'xilian', 'leimiaier'];
 
@@ -101,11 +101,11 @@ async function renderIndex() {
         '<div class="hero-date">最后更新：' + esc(fmtUpdated(latest.updatedAt)) + status + '</div>' +
         '<h1>三人总人气</h1>' +
         '<div class="big-number">' + fmt(latest.totalPopularity) + '</div>' +
-        '<div class="hero-note">爱莉希雅 · 昔涟 · 蕾米艾尔 · 每日统计一次</div>' +
+        '<div class="hero-note">爱莉希雅 · 昔涟 · 蕾米埃尔 · 每日统计一次</div>' +
       '</section>' +
       '<section class="char-grid">' + cards + '</section>' +
       '<section class="history"><h2>历史记录</h2><div class="table-wrap"><table>' +
-        '<thead><tr><th>日期</th><th>爱莉希雅</th><th>昔涟</th><th>蕾米艾尔</th><th>总人气</th></tr></thead>' +
+        '<thead><tr><th>日期</th><th>爱莉希雅</th><th>昔涟</th><th>蕾米埃尔</th><th>总人气</th></tr></thead>' +
         '<tbody>' + (rows || '<tr><td colspan="5" class="empty">暂无历史数据</td></tr>') + '</tbody>' +
       '</table></div></section>';
   } catch (e) {
@@ -151,3 +151,4 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slug) renderCharacter(slug);
   else renderIndex();
 });
+

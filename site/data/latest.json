@@ -1,18 +1,18 @@
 {
   "date": "2026-09-08",
-  "updatedAt": "2026-09-08T04:43:08.226Z",
-  "totalPopularity": 46215,
+  "updatedAt": "2026-09-08T04:54:26.220Z",
+  "totalPopularity": 105245,
   "characters": {
     "ailixiya": {
       "name": "爱莉希雅",
       "keyword": "爱莉希雅",
-      "totalPlay": 21231,
-      "count": 17,
+      "totalPlay": 21649,
+      "count": 19,
       "videos": [
         {
           "title": "黛玉强老师看崩3爱莉希雅动画两眼湿润当场破防 依然没走出翁法罗斯：太像了啊！一种似曾相识的感觉啊【因你而在的故事/TruE】",
           "bvid": "BV1shbT6TE2r",
-          "play": 19902,
+          "play": 20303,
           "pubdate": 1788799579,
           "pic": "https://i2.hdslb.com/bfs/archive/ca7cbdfc05d0de32e4a92c803226fedb0e74ce69.jpg",
           "duration": "9:30",
@@ -21,7 +21,7 @@
         {
           "title": "终于上当了",
           "bvid": "BV1XLbT6jEtP",
-          "play": 380,
+          "play": 383,
           "pubdate": 1788797017,
           "pic": "https://i1.hdslb.com/bfs/archive/b3b1f40163f9c63649b566b50626bc5a719a642a.jpg",
           "duration": "0:15",
@@ -30,7 +30,7 @@
         {
           "title": "拿着，出去和别人说我是爱莉希雅.jpg",
           "bvid": "BV1tTbg6JEab",
-          "play": 367,
+          "play": 375,
           "pubdate": 1788834010,
           "pic": "https://i2.hdslb.com/bfs/archive/22f93b23d93626fdeed6ce53c9a212350a4a038d.jpg",
           "duration": "1:50",
@@ -39,7 +39,7 @@
         {
           "title": "9.8-9.13 iOS终级区记忆战场二档119799合辑  sss虚数猪up  sss梅比乌斯  ss卡莲",
           "bvid": "BV1fPbu6aEPL",
-          "play": 316,
+          "play": 321,
           "pubdate": 1788815916,
           "pic": "https://i1.hdslb.com/bfs/archive/8380cdf230427ab6af2fe0675c74e4d8d5eaaeca.jpg",
           "duration": "5:28",
@@ -48,7 +48,7 @@
         {
           "title": "昔涟：伙伴，我生气了，我允许你拥有我和另一个粉毛，为什么还找了别的？",
           "bvid": "BV1XVbT6mEJj",
-          "play": 266,
+          "play": 267,
           "pubdate": 1788797375,
           "pic": "https://i0.hdslb.com/bfs/archive/99e6152ef940a9e3176c317c2d5d0c09b2e4c27a.jpg",
           "duration": "0:26",
@@ -59,13 +59,13 @@
     "xilian": {
       "name": "昔涟",
       "keyword": "昔涟",
-      "totalPlay": 24693,
+      "totalPlay": 25285,
       "count": 46,
       "videos": [
         {
           "title": "黛玉强老师看崩3爱莉希雅动画两眼湿润当场破防 依然没走出翁法罗斯：太像了啊！一种似曾相识的感觉啊【因你而在的故事/TruE】",
           "bvid": "BV1shbT6TE2r",
-          "play": 19902,
+          "play": 20303,
           "pubdate": 1788799579,
           "pic": "https://i2.hdslb.com/bfs/archive/ca7cbdfc05d0de32e4a92c803226fedb0e74ce69.jpg",
           "duration": "9:30",
@@ -74,7 +74,7 @@
         {
           "title": "女孩只是不小心太过纯爱，结果就被邻居造谣不会给老公做饭。",
           "bvid": "BV1Qnb36bEsZ",
-          "play": 1695,
+          "play": 1747,
           "pubdate": 1788822000,
           "pic": "https://i1.hdslb.com/bfs/archive/56689216019e6d3cbcced68cc77446dfc241761f.jpg",
           "duration": "1:23",
@@ -83,55 +83,82 @@
         {
           "title": "等昔涟",
           "bvid": "BV1VubT6HEfp",
-          "play": 1092,
+          "play": 1096,
           "pubdate": 1788806100,
           "pic": "https://i1.hdslb.com/bfs/archive/e06ddfd64ce49fd6dabb71904d4895f5517b1c97.jpg",
           "duration": "0:58",
           "author": "往昔-涟漪-桃子-爱"
         },
         {
-          "title": "这也太装货了",
-          "bvid": "BV16ybu6NESi",
-          "play": 1016,
-          "pubdate": 1788825600,
-          "pic": "https://i2.hdslb.com/bfs/archive/9910da07f2e6021a3a689fcf7ecc19163af10cff.jpg",
-          "duration": "0:11",
-          "author": "天命苦瓜大王"
-        },
-        {
           "title": "AI昔涟演唱《不舍》加长版",
           "bvid": "BV1nWbg6BEf9",
-          "play": 988,
+          "play": 1070,
           "pubdate": 1788831108,
           "pic": "https://i0.hdslb.com/bfs/archive/05009b904863513fb422457533f9aa52248d6e25.jpg",
           "duration": "1:33",
           "author": "Tiramisu_sk"
+        },
+        {
+          "title": "这也太装货了",
+          "bvid": "BV16ybu6NESi",
+          "play": 1069,
+          "pubdate": 1788825600,
+          "pic": "https://i2.hdslb.com/bfs/archive/9910da07f2e6021a3a689fcf7ecc19163af10cff.jpg",
+          "duration": "0:11",
+          "author": "天命苦瓜大王"
         }
       ]
     },
     "leimiaier": {
-      "name": "蕾米艾尔",
-      "keyword": "蕾米艾尔",
-      "totalPlay": 291,
-      "count": 2,
+      "name": "蕾米埃尔",
+      "keyword": "蕾米埃尔",
+      "totalPlay": 58311,
+      "count": 61,
       "videos": [
         {
-          "title": "你下去，后面两个上来😡",
-          "bvid": "BV1cubV61EMr",
-          "play": 179,
-          "pubdate": 1788840469,
-          "pic": "https://i0.hdslb.com/bfs/archive/cac0540bb28f9f7e1099a02152344a9b2e3f6c14.jpg",
-          "duration": "0:16",
-          "author": "笑苍天2022"
+          "title": "菲欧妮原来是倒霉熊？有配音版，克拉蕾＆挽昼剧情",
+          "bvid": "BV12hb36QErk",
+          "play": 28880,
+          "pubdate": 1788823890,
+          "pic": "https://i1.hdslb.com/bfs/archive/4436c8b047ed400cd86d9697efd7dfd30a41c11b.jpg",
+          "duration": "2:57",
+          "author": "Tamama在蓝星"
         },
         {
-          "title": "绝区零空洞战斗结束蕾米艾尔慢放bug",
-          "bvid": "BV1imbT6sERX",
-          "play": 112,
-          "pubdate": 1788796999,
-          "pic": "https://i0.hdslb.com/bfs/archive/bf3c6f5006bac7f4275412a23b800f8adf251369.jpg",
-          "duration": "3:10",
-          "author": "羚堂瑞"
+          "title": "年鹏跟小欣欣聊天得知国民大舅哥一个月全团2000多万流水，自己要是赚那么多直接退役",
+          "bvid": "BV1pfbg6yExn",
+          "play": 12791,
+          "pubdate": 1788826130,
+          "pic": "https://i1.hdslb.com/bfs/archive/7724f61171d51709e621ccc9e250f9df31448ab0.jpg",
+          "duration": "2:5",
+          "author": "老酒宝OuO"
+        },
+        {
+          "title": "关于哲哥交不起电费于是只能将哲耳根外卖这件事",
+          "bvid": "BV1mhb36QEVR",
+          "play": 7054,
+          "pubdate": 1788823942,
+          "pic": "https://i2.hdslb.com/bfs/archive/06264aabcb66636fdadef23ce9ef597f52370761.jpg",
+          "duration": "1:29",
+          "author": "废纸箱想想想"
+        },
+        {
+          "title": "【千夏 × 爱芮× 南宫×蕾米×妮可】気まぐれメルシィ（随心所欲Mercy）【妄想天使／『幸运梦想家』】",
+          "bvid": "BV1FPbu6YE7z",
+          "play": 4920,
+          "pubdate": 1788815916,
+          "pic": "https://i2.hdslb.com/bfs/archive/3ab6fc2245bc474197fbe9ca04332d5565ab4ece.jpg",
+          "duration": "2:31",
+          "author": "蕾昴_"
+        },
+        {
+          "title": "「好啊算旧账」",
+          "bvid": "BV1RjtD6rEf3",
+          "play": 4666,
+          "pubdate": 1788825600,
+          "pic": "https://i2.hdslb.com/bfs/archive/6f2ca1fe64995d63de0f5934c6e433751f4f88b7.jpg",
+          "duration": "1:4",
+          "author": "大老师-练肝术士"
         }
       ]
     }

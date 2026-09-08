@@ -9,16 +9,17 @@ const SITE_DATA = join(ROOT, 'site', 'data');
 const CHARACTERS = [
   { slug: 'ailixiya', name: '爱莉希雅', keyword: '爱莉希雅' },
   { slug: 'xilian', name: '昔涟', keyword: '昔涟' },
-  { slug: 'leimiaier', name: '蕾米艾尔', keyword: '蕾米艾尔' },
+  { slug: 'leimiaier', name: '蕾米埃尔', keyword: '蕾米埃尔' },
 ];
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 const REFERER = 'https://www.bilibili.com/';
-const MAX_PAGES = 8;
+const MAX_PAGES = 10;
 const TOP_N = 5;
 const DAY_SECONDS = 86400;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const num = (x) => (typeof x === 'number' ? x : parseInt(x, 10));
 
 function shanghaiToday() {
   const parts = new Intl.DateTimeFormat('en-CA', {
@@ -56,6 +57,16 @@ function normalizePic(pic) {
   return 'https:' + p;
 }
 
+function isChronological(items) {
+  if (!items || items.length < 3) return true;
+  let inversions = 0;
+  for (let i = 1; i < items.length; i++) {
+    if (num(items[i].pubdate) > num(items[i - 1].pubdate)) inversions++;
+  }
+  const pairs = items.length - 1;
+  return inversions <= Math.ceil(pairs * 0.15);
+}
+
 async function getCookieJar() {
   const res = await fetch('https://www.bilibili.com/', {
     headers: {
@@ -80,13 +91,19 @@ async function getCookieJar() {
   return jar;
 }
 
-async function requestJson(url, cookieHeader) {
+function cookieHeader(jar) {
+  return Object.entries(jar)
+    .map(([k, v]) => `${k}=${v}`)
+    .join('; ');
+}
+
+async function requestJson(url, cookieHeaderStr) {
   const res = await fetch(url, {
     headers: {
       'User-Agent': UA,
       Referer: REFERER,
       'Accept-Language': 'zh-CN,zh;q=0.9',
-      Cookie: cookieHeader,
+      Cookie: cookieHeaderStr,
     },
   });
   const text = await res.text();
@@ -99,40 +116,44 @@ async function requestJson(url, cookieHeader) {
   return { status: res.status, json };
 }
 
+async function fetchChronologicalPage(keyword, page, cookieJar) {
+  const url = `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=${encodeURIComponent(keyword)}&order=pubdate&page=${page}`;
+  let lastItems = null;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const { json } = await requestJson(url, cookieHeader(cookieJar));
+    if (json && json.code === 0) {
+      const items = (json.data && json.data.result) || [];
+      if (isChronological(items)) return items;
+      console.warn(`  [${keyword}] page ${page} attempt ${attempt + 1}: not time-ordered, retrying`);
+    } else {
+      console.warn(`  [${keyword}] page ${page} attempt ${attempt + 1}: code=${json && json.code}`);
+    }
+    cookieJar.buvid3 = (await getCookieJar()).buvid3;
+    await sleep(1200 * (attempt + 1));
+    lastItems = null;
+  }
+  return lastItems;
+}
+
 async function searchCharacter(char) {
   const { start, end } = shanghaiToday();
   const videos = [];
   const seen = new Set();
-  let cookieJar = await getCookieJar();
+  const cookieJar = await getCookieJar();
 
   for (let page = 1; page <= MAX_PAGES; page++) {
-    const url = `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=${encodeURIComponent(char.keyword)}&order=pubdate&page=${page}`;
-    let result = null;
-
-    for (let attempt = 0; attempt < 4; attempt++) {
-      const cookieHeader = Object.entries(cookieJar)
-        .map(([k, v]) => `${k}=${v}`)
-        .join('; ');
-      const { json } = await requestJson(url, cookieHeader);
-      if (json && json.code === 0) {
-        result = json;
-        break;
-      }
-      console.warn(`  [${char.name}] page ${page} attempt ${attempt + 1} failed (code=${json && json.code})`);
-      cookieJar = await getCookieJar();
-      await sleep(1500 * (attempt + 1));
-    }
-
-    if (!result) {
-      throw new Error(`${char.name} search failed after retries`);
-    }
-
-    const items = (result.data && result.data.result) || [];
+    const items = await fetchChronologicalPage(char.keyword, page, cookieJar);
+    if (!items) throw new Error(`${char.name} search page ${page} failed after retries`);
     if (!items.length) break;
 
+    let sawOlder = false;
     for (const it of items) {
-      const pub = typeof it.pubdate === 'number' ? it.pubdate : parseInt(it.pubdate, 10);
-      if (!Number.isFinite(pub) || pub < start || pub >= end) continue;
+      const pub = num(it.pubdate);
+      if (!Number.isFinite(pub) || pub < start) {
+        sawOlder = true;
+        continue;
+      }
+      if (pub >= end) continue;
       if (!it.bvid || seen.has(it.bvid)) continue;
       seen.add(it.bvid);
       videos.push({
@@ -146,7 +167,8 @@ async function searchCharacter(char) {
       });
     }
 
-    await sleep(700);
+    if (sawOlder) break;
+    await sleep(500);
   }
 
   videos.sort((a, b) => b.play - a.play || b.pubdate - a.pubdate);
