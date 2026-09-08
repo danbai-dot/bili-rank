@@ -58,6 +58,15 @@ function cardHTML(v, i) {
   );
 }
 
+function videoSection(title, cards, emptyText) {
+  return (
+    '<section class="section">' +
+      '<h2 class="section-title">' + esc(title) + '</h2>' +
+      '<div class="video-grid">' + (cards || '<div class="empty">' + esc(emptyText) + '</div>') + '</div>' +
+    '</section>'
+  );
+}
+
 async function renderIndex() {
   const app = document.getElementById('app');
   try {
@@ -125,12 +134,14 @@ async function renderCharacter(slug) {
     const latest = await loadJSON('data/latest.json');
     const c = (latest.characters && latest.characters[slug]) || {};
     const videos = Array.isArray(c.videos) ? c.videos : [];
+    const history = Array.isArray(c.history) ? c.history : [];
 
     const note = c.error
       ? ' <span class="badge warn">更新失败，可能沿用昨日数据</span>'
       : (c.count > 0 && c.count < 5 ? ' <span class="badge">今日仅 ' + c.count + ' 条</span>' : '');
 
-    const cards = videos.map((v, i) => cardHTML(v, i)).join('');
+    const todayCards = videos.map((v, i) => cardHTML(v, i)).join('');
+    const historyCards = history.map((v, i) => cardHTML(v, i)).join('');
 
     app.innerHTML =
       '<section class="char-hero">' +
@@ -138,9 +149,8 @@ async function renderCharacter(slug) {
         '<div class="char-page-total">当日 Top5 播放量之和：<strong>' + fmt(c.totalPlay || 0) + '</strong></div>' +
         '<div class="hero-date">最后更新：' + esc(fmtUpdated(latest.updatedAt)) + note + '</div>' +
       '</section>' +
-      '<section class="video-grid">' +
-        (cards || '<div class="empty">今日暂无相关视频</div>') +
-      '</section>';
+      videoSection('当天前五', todayCards, '今日暂无相关视频') +
+      videoSection('历史前十', historyCards, '暂无历史数据');
   } catch (e) {
     app.innerHTML = errorHTML('数据加载失败', e);
   }
@@ -151,4 +161,3 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slug) renderCharacter(slug);
   else renderIndex();
 });
-

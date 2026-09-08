@@ -16,6 +16,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const REFERER = 'https://www.bilibili.com/';
 const MAX_PAGES = 10;
 const TOP_N = 5;
+const HISTORY_TOP_N = 10;
 const DAY_SECONDS = 86400;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -55,6 +56,18 @@ function normalizePic(pic) {
   if (p.startsWith('//')) return 'https:' + p;
   if (p.startsWith('http://') || p.startsWith('https://')) return p;
   return 'https:' + p;
+}
+
+function mapVideo(it) {
+  return {
+    title: cleanTitle(it.title),
+    bvid: it.bvid,
+    play: Number(it.play) || 0,
+    pubdate: num(it.pubdate),
+    pic: normalizePic(it.pic),
+    duration: String(it.duration || ''),
+    author: String(it.author || ''),
+  };
 }
 
 function isChronological(items) {
@@ -118,7 +131,6 @@ async function requestJson(url, cookieHeaderStr) {
 
 async function fetchChronologicalPage(keyword, page, cookieJar) {
   const url = `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=${encodeURIComponent(keyword)}&order=pubdate&page=${page}`;
-  let lastItems = null;
   for (let attempt = 0; attempt < 5; attempt++) {
     const { json } = await requestJson(url, cookieHeader(cookieJar));
     if (json && json.code === 0) {
@@ -130,12 +142,11 @@ async function fetchChronologicalPage(keyword, page, cookieJar) {
     }
     cookieJar.buvid3 = (await getCookieJar()).buvid3;
     await sleep(1200 * (attempt + 1));
-    lastItems = null;
   }
-  return lastItems;
+  return null;
 }
 
-async function searchCharacter(char) {
+async function searchToday(char) {
   const { start, end } = shanghaiToday();
   const videos = [];
   const seen = new Set();
@@ -156,15 +167,7 @@ async function searchCharacter(char) {
       if (pub >= end) continue;
       if (!it.bvid || seen.has(it.bvid)) continue;
       seen.add(it.bvid);
-      videos.push({
-        title: cleanTitle(it.title),
-        bvid: it.bvid,
-        play: Number(it.play) || 0,
-        pubdate: pub,
-        pic: normalizePic(it.pic),
-        duration: String(it.duration || ''),
-        author: String(it.author || ''),
-      });
+      videos.push(mapVideo(it));
     }
 
     if (sawOlder) break;
@@ -174,6 +177,37 @@ async function searchCharacter(char) {
   videos.sort((a, b) => b.play - a.play || b.pubdate - a.pubdate);
   const top = videos.slice(0, TOP_N);
   return { videos: top, count: videos.length, totalPlay: top.reduce((s, v) => s + v.play, 0) };
+}
+
+async function searchAllTimeTop(char, excludeBvids) {
+  const out = [];
+  const seen = new Set(excludeBvids);
+  const cookieJar = await getCookieJar();
+
+  for (let page = 1; page <= 3 && out.length < HISTORY_TOP_N; page++) {
+    const url = `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=${encodeURIComponent(char.keyword)}&order=click&page=${page}`;
+    let items = null;
+    for (let attempt = 0; attempt < 4; attempt++) {
+      const { json } = await requestJson(url, cookieHeader(cookieJar));
+      if (json && json.code === 0) {
+        items = (json.data && json.data.result) || [];
+        break;
+      }
+      cookieJar.buvid3 = (await getCookieJar()).buvid3;
+      await sleep(1000 * (attempt + 1));
+    }
+    if (!items || !items.length) break;
+
+    for (const it of items) {
+      if (out.length >= HISTORY_TOP_N) break;
+      if (!it.bvid || seen.has(it.bvid)) continue;
+      seen.add(it.bvid);
+      out.push(mapVideo(it));
+    }
+    await sleep(500);
+  }
+
+  return out.slice(0, HISTORY_TOP_N);
 }
 
 function loadJson(path) {
@@ -196,22 +230,32 @@ async function main() {
 
   for (const c of CHARACTERS) {
     try {
-      const r = await searchCharacter(c);
+      const today = await searchToday(c);
+      let top = [];
+      try {
+        top = await searchAllTimeTop(c, new Set(today.videos.map((v) => v.bvid)));
+      } catch (e) {
+        console.warn(`[warn] ${c.name} all-time top fetch failed: ${e.message}`);
+        if (latestPrev && latestPrev.characters && latestPrev.characters[c.slug] && latestPrev.characters[c.slug].history) {
+          top = latestPrev.characters[c.slug].history;
+        }
+      }
       successCount++;
       characters[c.slug] = {
         name: c.name,
         keyword: c.keyword,
-        totalPlay: r.totalPlay,
-        count: r.count,
-        videos: r.videos,
+        totalPlay: today.totalPlay,
+        count: today.count,
+        videos: today.videos,
+        history: top,
       };
-      console.log(`[ok] ${c.name}: today=${r.count} top5Play=${r.totalPlay}`);
+      console.log(`[ok] ${c.name}: today=${today.count} top5Play=${today.totalPlay} history=${top.length}`);
     } catch (e) {
       console.error(`[error] ${c.name}: ${e.message}`);
       if (latestPrev && latestPrev.characters && latestPrev.characters[c.slug]) {
         characters[c.slug] = { ...latestPrev.characters[c.slug], error: true };
       } else {
-        characters[c.slug] = { name: c.name, keyword: c.keyword, totalPlay: 0, count: 0, videos: [], error: true };
+        characters[c.slug] = { name: c.name, keyword: c.keyword, totalPlay: 0, count: 0, videos: [], history: [], error: true };
       }
     }
   }
@@ -252,7 +296,7 @@ async function main() {
         successCount,
         totalPopularity,
         perCharacter: Object.fromEntries(
-          Object.entries(characters).map(([k, v]) => [k, { totalPlay: v.totalPlay, count: v.count, error: !!v.error }])
+          Object.entries(characters).map(([k, v]) => [k, { totalPlay: v.totalPlay, count: v.count, historyCount: v.history.length, error: !!v.error }])
         ),
       },
       null,
