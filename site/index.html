@@ -18,9 +18,24 @@
       </nav>
     </header>
     <main id="app"><div class="loading">加载中…</div></main>
+
+    <section class="comments">
+      <h2 class="section-title">游客留言</h2>
+      <p class="comments-hint">有什么想说的可以写在这里。如果下方没有出现留言框，请先
+        <a href="https://github.com/apps/utterances" target="_blank" rel="noopener">安装 utterances 应用</a>
+        并授权仓库 danbai-dot/bili-rank（一次性设置）。</p>
+      <script src="https://utteranc.es/client.js"
+              repo="danbai-dot/bili-rank"
+              issue-term="pathname"
+              label="留言"
+              theme="github-light"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </section>
+
     <footer>数据来源：bilibili · 每天自动更新一次</footer>
   </div>
   <script src="assets/app.js"></script>
 </body>
 </html>
-

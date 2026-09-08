@@ -1,7 +1,7 @@
 const CHAR_META = {
-  ailixiya: { name: '爱莉希雅', page: 'ailixiya.html' },
-  xilian: { name: '昔涟', page: 'xilian.html' },
-  leimiaier: { name: '蕾米埃尔', page: 'leimiaier.html' },
+  ailixiya: { name: '爱莉希雅', page: 'ailixiya.html', img: 'assets/img/ailixiya.jpg' },
+  xilian: { name: '昔涟', page: 'xilian.html', img: 'assets/img/xilian.jpg' },
+  leimiaier: { name: '蕾米埃尔', page: 'leimiaier.html', img: 'assets/img/leimiaier.jpg' },
 };
 const SLUGS = ['ailixiya', 'xilian', 'leimiaier'];
 
@@ -75,24 +75,20 @@ async function renderIndex() {
       loadJSON('data/history.json'),
     ]);
 
-    const chars = SLUGS.map((slug) => {
-      const c = (latest.characters && latest.characters[slug]) || {};
-      return Object.assign({ slug }, CHAR_META[slug], c);
-    });
-
     const status = latest.status === 'partial'
       ? ' <span class="badge warn">部分更新失败，个别数据沿用昨日</span>'
-      : '';
+      : (latest.status === 'error' ? ' <span class="badge warn">今日抓取失败，展示为上次数据</span>' : '');
 
-    const cards = chars.map((c, i) => {
-      const badge = c.error ? '<span class="badge warn">更新失败</span>' : '';
+    const cards = SLUGS.map((slug) => {
+      const c = (latest.characters && latest.characters[slug]) || {};
       return (
-        '<a class="char-card" href="' + c.page + '">' +
-          '<div class="char-card-head"><span class="char-rank">' + (i + 1) + '</span>' +
-          '<span class="char-name">' + esc(c.name) + '</span></div>' +
-          '<div class="char-total">' + fmt(c.totalPlay) + '</div>' +
-          '<div class="char-sub">今日 Top5 播放量之和' + (c.count ? ' · 今日 ' + c.count + ' 条' : '') + '</div>' +
-          badge +
+        '<a class="char-card" href="' + CHAR_META[slug].page + '" style="background-image:url(\'' + esc(CHAR_META[slug].img) + '\')">' +
+          '<div class="char-card-overlay"></div>' +
+          '<div class="char-card-body">' +
+            '<div class="char-card-name">' + esc(CHAR_META[slug].name) + '</div>' +
+            '<div class="char-card-total">' + fmt(c.totalPlay) + '</div>' +
+            '<div class="char-card-sub">当日 Top5 播放量之和' + (c.count ? ' · 今日 ' + c.count + ' 条' : '') + '</div>' +
+          '</div>' +
         '</a>'
       );
     }).join('');
@@ -110,7 +106,7 @@ async function renderIndex() {
         '<div class="hero-date">最后更新：' + esc(fmtUpdated(latest.updatedAt)) + status + '</div>' +
         '<h1>三人总人气</h1>' +
         '<div class="big-number">' + fmt(latest.totalPopularity) + '</div>' +
-        '<div class="hero-note">爱莉希雅 · 昔涟 · 蕾米埃尔 · 每日统计一次</div>' +
+        '<div class="hero-note">爱莉希雅 · 昔涟 · 蕾米埃尔 · 每天自动统计一次</div>' +
       '</section>' +
       '<section class="char-grid">' + cards + '</section>' +
       '<section class="history"><h2>历史记录</h2><div class="table-wrap"><table>' +
@@ -145,9 +141,12 @@ async function renderCharacter(slug) {
 
     app.innerHTML =
       '<section class="char-hero">' +
-        '<h1>' + esc(meta.name) + '</h1>' +
-        '<div class="char-page-total">当日 Top5 播放量之和：<strong>' + fmt(c.totalPlay || 0) + '</strong></div>' +
-        '<div class="hero-date">最后更新：' + esc(fmtUpdated(latest.updatedAt)) + note + '</div>' +
+        '<div class="char-hero-img"><img src="' + esc(meta.img) + '" alt="' + esc(meta.name) + '"></div>' +
+        '<div class="char-hero-info">' +
+          '<h1>' + esc(meta.name) + '</h1>' +
+          '<div class="char-hero-total">当日 Top5 播放量之和：<strong>' + fmt(c.totalPlay || 0) + '</strong></div>' +
+          '<div class="hero-date">最后更新：' + esc(fmtUpdated(latest.updatedAt)) + note + '</div>' +
+        '</div>' +
       '</section>' +
       videoSection('当天前五', todayCards, '今日暂无相关视频') +
       videoSection('历史前十', historyCards, '暂无历史数据');
@@ -161,3 +160,4 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slug) renderCharacter(slug);
   else renderIndex();
 });
+
