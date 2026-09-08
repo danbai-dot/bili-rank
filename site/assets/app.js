@@ -125,7 +125,7 @@ async function renderCharacter(slug) {
     app.innerHTML = errorHTML('未知角色');
     return;
   }
-  document.title = meta.name + ' · B站每日人气榜';
+  document.title = meta.name + ' · 米家角色每日人气榜';
   try {
     const latest = await loadJSON('data/latest.json');
     const c = (latest.characters && latest.characters[slug]) || {};
