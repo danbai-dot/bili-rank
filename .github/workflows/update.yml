@@ -1,6 +1,8 @@
 name: Update daily rank
 
 on:
+  push:
+    branches: [main]
   schedule:
     # 16:30 UTC = 00:30 Asia/Shanghai (next day)
     - cron: '30 16 * * *'
@@ -56,3 +58,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
