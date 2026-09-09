@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    # 16:30 UTC = 00:30 Asia/Shanghai (next day)
+    # 00:30 Asia/Shanghai = 前一天 16:30 UTC；统计“昨天”的完整数据
     - cron: '30 16 * * *'
   workflow_dispatch: {}
 

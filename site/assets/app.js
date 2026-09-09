@@ -103,10 +103,10 @@ async function renderIndex() {
 
     app.innerHTML =
       '<section class="hero">' +
-        '<div class="hero-date">最后更新：' + esc(fmtUpdated(latest.updatedAt)) + status + '</div>' +
+        '<div class="hero-date">榜单日期 ' + esc(latest.date) + ' · 更新于 ' + esc(fmtUpdated(latest.updatedAt)) + status + '</div>' +
         '<h1>三人总人气</h1>' +
         '<div class="big-number">' + fmt(latest.totalPopularity) + '</div>' +
-        '<div class="hero-note">爱莉希雅 · 昔涟 · 蕾米埃尔 · 每天自动统计一次</div>' +
+        '<div class="hero-note">爱莉希雅 · 昔涟 · 蕾米埃尔 · 每日 00:30 更新昨日完整数据</div>' +
       '</section>' +
       '<section class="char-grid">' + cards + '</section>' +
       '<section class="history"><h2>历史记录</h2><div class="table-wrap"><table>' +
@@ -145,10 +145,10 @@ async function renderCharacter(slug) {
         '<div class="char-hero-info">' +
           '<h1>' + esc(meta.name) + '</h1>' +
           '<div class="char-hero-total">当日 Top5 播放量之和：<strong>' + fmt(c.totalPlay || 0) + '</strong></div>' +
-          '<div class="hero-date">最后更新：' + esc(fmtUpdated(latest.updatedAt)) + note + '</div>' +
+          '<div class="hero-date">榜单日期 ' + esc(latest.date) + ' · 更新于 ' + esc(fmtUpdated(latest.updatedAt)) + note + '</div>' +
         '</div>' +
       '</section>' +
-      videoSection('当天前五', todayCards, '今日暂无相关视频') +
+      videoSection('当日 Top5', todayCards, '当日暂无相关视频') +
       videoSection('历史前十', historyCards, '暂无历史数据');
   } catch (e) {
     app.innerHTML = errorHTML('数据加载失败', e);

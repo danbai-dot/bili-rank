@@ -22,13 +22,14 @@ const DAY_SECONDS = 86400;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const num = (x) => (typeof x === 'number' ? x : parseInt(x, 10));
 
-function shanghaiToday() {
+// 每天 00:30（Asia/Shanghai）运行：统计“昨天”这个刚结束的完整自然日。
+function rankedDay() {
   const parts = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Asia/Shanghai',
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
-  }).formatToParts(new Date());
+  }).formatToParts(new Date(Date.now() - DAY_SECONDS * 1000));
   const get = (type) => parts.find((p) => p.type === type).value;
   const date = `${get('year')}-${get('month')}-${get('day')}`;
   const start = Math.floor(Date.parse(`${date}T00:00:00+08:00`) / 1000);
@@ -147,7 +148,7 @@ async function fetchChronologicalPage(keyword, page, cookieJar) {
 }
 
 async function searchToday(char) {
-  const { start, end } = shanghaiToday();
+  const { start, end } = rankedDay();
   const videos = [];
   const seen = new Set();
   const cookieJar = await getCookieJar();
@@ -220,7 +221,7 @@ function loadJson(path) {
 
 async function main() {
   mkdirSync(SITE_DATA, { recursive: true });
-  const { date } = shanghaiToday();
+  const { date } = rankedDay();
   const latestPrev = loadJson(join(SITE_DATA, 'latest.json'));
   const historyRaw = loadJson(join(SITE_DATA, 'history.json'));
   const history = Array.isArray(historyRaw) ? historyRaw : [];
