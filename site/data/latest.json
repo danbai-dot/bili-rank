@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-09",
-  "updatedAt": "2026-10-09T21:05:52.294Z",
-  "totalPopularity": 313258,
+  "date": "2026-10-10",
+  "updatedAt": "2026-10-10T20:13:05.020Z",
+  "totalPopularity": 342368,
   "characters": {
     "ailixiya": {
       "name": "爱莉希雅",
       "keyword": "爱莉希雅",
-      "totalPlay": 33704,
-      "count": 79,
+      "totalPlay": 59056,
+      "count": 70,
       "videos": [
         {
-          "title": "爱莉喵带小猫日常。",
-          "bvid": "BV1hxpb6tEu1",
-          "play": 13650,
-          "pubdate": 1791547018,
-          "pic": "https://i0.hdslb.com/bfs/archive/5c1cf004218e1b9f9f2cdec2d6472d1f53ec6109.jpg",
-          "duration": "0:44",
+          "title": "二游活化石，十年了居然还没完结？！",
+          "bvid": "BV1AKpg6bErj",
+          "play": 24685,
+          "pubdate": 1791632700,
+          "pic": "https://i2.hdslb.com/bfs/archive/c2a8721e9b684295de42e8f21d403b45d13face2.jpg",
+          "duration": "6:34",
+          "author": "小赛放映姬"
+        },
+        {
+          "title": "爱莉喵为了让自己不那么胖把所有小猫都变胖了。最近算力太拉了。",
+          "bvid": "BV1yypg6aEyu",
+          "play": 12742,
+          "pubdate": 1791629909,
+          "pic": "https://i0.hdslb.com/bfs/archive/d9d764cd75c7ccdd511344fc25d16e1bf0a18418.jpg",
+          "duration": "0:16",
           "author": "练习两年半的旅伥"
         },
         {
-          "title": "被绑架的爱莉",
-          "bvid": "BV1GHp46pEg3",
-          "play": 9111,
-          "pubdate": 1791543600,
-          "pic": "https://i0.hdslb.com/bfs/archive/ea132febafba792cd13ee5e99cb64e4ce20000ba.jpg",
-          "duration": "0:31",
-          "author": "自律猫zzz"
+          "title": "在原神里看爱莉希雅动画短片？！克苟看崩3真爱厨在原神复刻往世乐土惊呆了：好家伙！你是抱着怎样的心情做进来的【克利咕咕兰/原神】",
+          "bvid": "BV1gXpu6MEK4",
+          "play": 11517,
+          "pubdate": 1791637728,
+          "pic": "https://i2.hdslb.com/bfs/archive/83fbe36fb26d274d04a93011131fcf3a62878004.jpg",
+          "duration": "11:42",
+          "author": "爱看美少女吃刀的凛夜"
         },
         {
-          "title": "今天是爱莉呀",
-          "bvid": "BV1Fyp46qEhk",
-          "play": 4175,
-          "pubdate": 1791530100,
-          "pic": "https://i0.hdslb.com/bfs/archive/a23d13f0da6deaf4328ce3de177aaa3a404dc6f1.jpg",
-          "duration": "0:20",
-          "author": "公西绝书ACE"
+          "title": "吓哭了！在奇域里手搓因你而存在的故事PV！崩坏三乐土观景图！克苟当场惊呼：这个奇域作者是有信仰的！一张一张的图拼出了因你而存在的故事！",
+          "bvid": "BV1jrpu61EtP",
+          "play": 6276,
+          "pubdate": 1791636471,
+          "pic": "https://i2.hdslb.com/bfs/archive/338b8a27ea517216e7b2ef1fd91e50412cab92a2.jpg",
+          "duration": "11:47",
+          "author": "双刀纸袋布"
         },
         {
-          "title": "每日一遍，活的通透",
-          "bvid": "BV1N5px6uEHS",
-          "play": 3486,
-          "pubdate": 1791513445,
-          "pic": "https://i0.hdslb.com/bfs/archive/118060eef3fb586ed15a9ed77de16cd13601a2f2.jpg",
-          "duration": "0:10",
-          "author": "书云锦"
-        },
-        {
-          "title": "叮当猫前女友 夏鸣前",
-          "bvid": "BV12Gpt67ET4",
-          "play": 3282,
-          "pubdate": 1791526574,
-          "pic": "https://i2.hdslb.com/bfs/archive/e61c1282fed47c9356edfa6b995df7f03f1de226.jpg",
-          "duration": "0:49",
-          "author": "尘土飞扬pro"
+          "title": "♡夜间车厢♡|爱莉希雅的睡前悄悄话~【Hires无损音质/4K】",
+          "bvid": "BV1SrpG6GEHr",
+          "play": 3836,
+          "pubdate": 1791643296,
+          "pic": "https://i1.hdslb.com/bfs/archive/7df0255aba8781967feba24f05292c3da5f72c6e.jpg",
+          "duration": "29:17",
+          "author": "黄衣Hastur"
         }
       ],
       "history": [
         {
           "title": "《崩坏3》动画短片「因你而在的故事」",
           "bvid": "BV1fY4y1F7GL",
-          "play": 25031501,
+          "play": 25033810,
           "pubdate": 1660276800,
           "pic": "https://i2.hdslb.com/bfs/archive/a87673b961d302042ecd9e73b1b99644a809a109.jpg",
           "duration": "8:26",
@@ -68,7 +68,7 @@
         {
           "title": "「TruE」——《崩坏3》印象曲（演唱者：黄龄）",
           "bvid": "BV1sg411y7cZ",
-          "play": 8702134,
+          "play": 8703540,
           "pubdate": 1660277400,
           "pic": "https://i2.hdslb.com/bfs/archive/d181111f256a9ec1ae59bb8ea2a343cebf1e67d6.jpg",
           "duration": "4:9",
@@ -77,7 +77,7 @@
         {
           "title": "全网寻找这个崩坏3嘉年华上的爱莉希雅！",
           "bvid": "BV1A8411S7mr",
-          "play": 7908861,
+          "play": 7908981,
           "pubdate": 1689677728,
           "pic": "https://i1.hdslb.com/bfs/archive/e5d6ae1813b947b67c2c6326a9954f35c71987c9.jpg",
           "duration": "0:17",
@@ -86,7 +86,7 @@
         {
           "title": "崩坏3「纯真梦歌」线上音乐会",
           "bvid": "BV1ad4y1d7Kk",
-          "play": 7838446,
+          "play": 7839241,
           "pubdate": 1661606401,
           "pic": "https://i0.hdslb.com/bfs/archive/2602c295176028b21107281870be099b0ffc6c64.jpg",
           "duration": "64:18",
@@ -95,7 +95,7 @@
         {
           "title": "【宴宁】Elysia【声优原创曲】",
           "bvid": "BV1dq4y1N7ry",
-          "play": 7636951,
+          "play": 7637550,
           "pubdate": 1631786416,
           "pic": "https://i2.hdslb.com/bfs/archive/1bc3fef52aa2a670b0abcc356f9dcaf8850daca9.jpg",
           "duration": "3:40",
@@ -104,7 +104,7 @@
         {
           "title": "关于爱莉痛车被创的后续",
           "bvid": "BV19N38zDERx",
-          "play": 6750897,
+          "play": 6751170,
           "pubdate": 1751470777,
           "pic": "https://i1.hdslb.com/bfs/archive/ff4f21f254a883e8b17c816233c0601982f2c342.jpg",
           "duration": "1:4",
@@ -113,7 +113,7 @@
         {
           "title": "「致以无瑕之人」——爱莉希雅「真我·人之律者」角色预告",
           "bvid": "BV1DS4y1t7rs",
-          "play": 6550383,
+          "play": 6550563,
           "pubdate": 1659094613,
           "pic": "https://i1.hdslb.com/bfs/archive/6de6889cb4404d95182064c6f5aeebb9669803ca.jpg",
           "duration": "8:2",
@@ -122,7 +122,7 @@
         {
           "title": "一指头戳下去，我人傻了！",
           "bvid": "BV1Kv411N7NW",
-          "play": 5064269,
+          "play": 5064302,
           "pubdate": 1629544650,
           "pic": "https://i2.hdslb.com/bfs/archive/6d86c26d752bb57900ed40127f0170784663c380.jpg",
           "duration": "8:11",
@@ -131,7 +131,7 @@
         {
           "title": "「爱莉希雅」致 爱-A song for beloved【声优原创曲】",
           "bvid": "BV1bB4y1L7qh",
-          "play": 5003206,
+          "play": 5003834,
           "pubdate": 1660645800,
           "pic": "https://i1.hdslb.com/bfs/archive/44730f613e47e4acc6dfd91bb0c6c973d56c15ff.jpg",
           "duration": "4:30",
@@ -140,7 +140,7 @@
         {
           "title": "💗坠入粉色爱河，你选择谁？💗",
           "bvid": "BV17B4y1J7vW",
-          "play": 4934064,
+          "play": 4934488,
           "pubdate": 1663840800,
           "pic": "https://i0.hdslb.com/bfs/archive/49d65d00373eaeb86f5b4d7aa4bd2980a58de302.jpg",
           "duration": "0:46",
@@ -151,60 +151,60 @@
     "xilian": {
       "name": "昔涟",
       "keyword": "昔涟",
-      "totalPlay": 96748,
-      "count": 140,
+      "totalPlay": 148900,
+      "count": 153,
       "videos": [
         {
-          "title": "老米又操控天象，提前昔涟回来预热是吧",
-          "bvid": "BV1NYps6TEWf",
-          "play": 23614,
-          "pubdate": 1791524596,
-          "pic": "https://i1.hdslb.com/bfs/archive/bcfe88a87a2f4ce28cdb63c0188ce87c2c1449ab.jpg",
-          "duration": "0:39",
-          "author": "十_柒灬"
+          "title": "孩子们，崩铁神了，翁法罗斯根本没有后续！",
+          "bvid": "BV1zBpe69Em7",
+          "play": 43395,
+          "pubdate": 1791597162,
+          "pic": "https://i2.hdslb.com/bfs/archive/b08edad87c060d9fc02fc917e2e0200d336608ad.jpg",
+          "duration": "1:4",
+          "author": "t0级薇斯纳lover"
         },
         {
-          "title": "孩子们，讲个鬼故事：我们的阿哈大人应该不会像当年昔涟那样，才刚进入梦池没多久就急着出来了吧（悲）",
-          "bvid": "BV1zxpt6BEeS",
-          "play": 23149,
-          "pubdate": 1791527411,
-          "pic": "https://i1.hdslb.com/bfs/archive/18736904e6925ea5ef9dfad6255824739b90503f.jpg",
-          "duration": "1:49",
-          "author": "很纯滴火花"
+          "title": "悲报！4.7和4.8没有翁法罗斯后续！",
+          "bvid": "BV13epY6BEE4",
+          "play": 33141,
+          "pubdate": 1791602774,
+          "pic": "https://i1.hdslb.com/bfs/archive/965fb3659cfe1bfa67273458eead2aab96b3ad30.jpg",
+          "duration": "1:25",
+          "author": "磕匕牢大"
         },
         {
-          "title": "星铁if线里的恐怖存在，有的甚至能杀死星神！",
-          "bvid": "BV1Msps6kER4",
-          "play": 17286,
-          "pubdate": 1791521956,
-          "pic": "https://i0.hdslb.com/bfs/archive/9e6b22e3f5ae5291790a81f9aabd0b9ab4d9ed49.jpg",
-          "duration": "0:54",
-          "author": "真寰宇说书人"
+          "title": "⚡昔涟丨司凤版 MAD⚡",
+          "bvid": "BV1Vhpg6GEMq",
+          "play": 27866,
+          "pubdate": 1791628373,
+          "pic": "https://i1.hdslb.com/bfs/archive/f374b76e04dfc2b916fa054c89214b045538f7c8.jpg",
+          "duration": "3:24",
+          "author": "金咸鱼"
         },
         {
-          "title": "《货币战争》全新梦境交织羁绊（翁法罗斯版）演示",
-          "bvid": "BV1u4HR6fEtY",
-          "play": 16945,
-          "pubdate": 1791487038,
-          "pic": "https://i0.hdslb.com/bfs/archive/8ce7bc6b419ffd5a730ad4e5a36879f7c01fa5bf.jpg",
-          "duration": "1:10",
-          "author": "星穹铁道小鸣呜"
+          "title": "【谁是卧底】其实我这是想找个理由放歌而已",
+          "bvid": "BV1WNph6SEqd",
+          "play": 22621,
+          "pubdate": 1791562301,
+          "pic": "https://i0.hdslb.com/bfs/archive/ac6614b9803fc974e6dc585411494fc2148ccd6a.jpg",
+          "duration": "1:13",
+          "author": "东咚咚镪锵"
         },
         {
-          "title": "昔涟",
-          "bvid": "BV1a6px6nEn8",
-          "play": 15754,
-          "pubdate": 1791509756,
-          "pic": "https://i0.hdslb.com/bfs/archive/a18f1b4d0067e5f58b21b591a724cbdf915dba4d.jpg",
-          "duration": "0:12",
-          "author": "薛定谔的大鸭鸭"
+          "title": "邻家有女初长成✨",
+          "bvid": "BV1Eppv69E17",
+          "play": 21877,
+          "pubdate": 1791621531,
+          "pic": "https://i0.hdslb.com/bfs/archive/0654c98be2e5b76b751d5a3934449e5a77185487.jpg",
+          "duration": "0:16",
+          "author": "轨迹丿晴叠"
         }
       ],
       "history": [
         {
           "title": "《崩坏：星穹铁道》动画短片：「你好，世界」",
           "bvid": "BV14G1kB5Evp",
-          "play": 12621478,
+          "play": 12631694,
           "pubdate": 1762315200,
           "pic": "https://i1.hdslb.com/bfs/archive/e6e2b49a90eb13c71252d83889b70d22670f42fe.jpg",
           "duration": "16:58",
@@ -213,7 +213,7 @@
         {
           "title": "《崩坏：星穹铁道》昔涟角色PV——「再度和你」",
           "bvid": "BV1yZ1MB1Eej",
-          "play": 11470268,
+          "play": 11475718,
           "pubdate": 1762056000,
           "pic": "https://i1.hdslb.com/bfs/archive/1d16055b7a39010990688cc2eed6cd546899f279.jpg",
           "duration": "14:14",
@@ -222,7 +222,7 @@
         {
           "title": "这都能还原！！？【MC昔涟篇】",
           "bvid": "BV11h1zBeEFV",
-          "play": 9707171,
+          "play": 9707399,
           "pubdate": 1762228800,
           "pic": "https://i1.hdslb.com/bfs/archive/becb3adb3dc5b6c5c71df291a135b2ddb8e20cb7.jpg",
           "duration": "2:52",
@@ -231,7 +231,7 @@
         {
           "title": "最尊重黄金裔的一集",
           "bvid": "BV1gTScB3EHD",
-          "play": 5999075,
+          "play": 6003197,
           "pubdate": 1764412294,
           "pic": "https://i2.hdslb.com/bfs/archive/93fa3a4662b1302b26433dd5fbd4f6ad8336153c.jpg",
           "duration": "2:22",
@@ -240,7 +240,7 @@
         {
           "title": "《崩坏：星穹铁道》音乐MV——「昔涟」",
           "bvid": "BV1XG2FBTEHK",
-          "play": 5674987,
+          "play": 5678457,
           "pubdate": 1762488000,
           "pic": "https://i0.hdslb.com/bfs/archive/193ba434a45c0d90520e1b138bad924370db0ab8.jpg",
           "duration": "3:31",
@@ -249,7 +249,7 @@
         {
           "title": "学了三天特效做出来的昔涟技能动画",
           "bvid": "BV12UdVBpEtg",
-          "play": 5225836,
+          "play": 5228665,
           "pubdate": 1776429173,
           "pic": "https://i0.hdslb.com/bfs/archive/858f1c28ccc715e359f07d08528f509ef48480d2.jpg",
           "duration": "13:46",
@@ -258,7 +258,7 @@
         {
           "title": "只属于高维生物的拼图 被我发明了",
           "bvid": "BV16HZjBxE1u",
-          "play": 5061622,
+          "play": 5061653,
           "pubdate": 1771048700,
           "pic": "https://i0.hdslb.com/bfs/archive/4d1e55d030ae7ec26ea472717923f65d5120d71f.jpg",
           "duration": "0:28",
@@ -267,7 +267,7 @@
         {
           "title": "“存了十六年才敢发出来”",
           "bvid": "BV1ih4uzTEqQ",
-          "play": 4552793,
+          "play": 4552909,
           "pubdate": 1760258388,
           "pic": "https://i0.hdslb.com/bfs/archive/dac4cf99696954c293e1dca20f73ccf08956e0bf.jpg",
           "duration": "3:24",
@@ -276,7 +276,7 @@
         {
           "title": "《崩坏：星穹铁道》黄金史诗PV：「再见，昔涟」",
           "bvid": "BV1yXyaBGEVR",
-          "play": 4545176,
+          "play": 4546179,
           "pubdate": 1761883200,
           "pic": "https://i1.hdslb.com/bfs/archive/06e1542f040a54720e8d7361133eb99385c1c580.jpg",
           "duration": "11:38",
@@ -285,7 +285,7 @@
         {
           "title": "【货币战争科研】货币战争最强主C竟是一费角色？羊刀无限叠加刀刀20亿！6w攻击力4000速阿雅0T财富造物主20 黄金之风正在摧毁货币战争",
           "bvid": "BV1Qz17BUEs9",
-          "play": 4184914,
+          "play": 4185387,
           "pubdate": 1762311900,
           "pic": "https://i1.hdslb.com/bfs/archive/1ca7727e5149e3fc95baf598aba14a118cf90e3d.jpg",
           "duration": "10:26",
@@ -296,60 +296,60 @@
     "leimiaier": {
       "name": "蕾米埃尔",
       "keyword": "蕾米埃尔",
-      "totalPlay": 182806,
-      "count": 190,
+      "totalPlay": 134412,
+      "count": 145,
       "videos": [
         {
-          "title": "我将，点燃星海！超帅大招！自带免死！搜打撤的神！虚狩驾驶员！蕾米埃尔最佳队友！自带自爆机制！绝区零3.3前瞻菲欧妮实机演示！坏了，真成绝区零流萤了",
-          "bvid": "BV1M8pb6REon",
-          "play": 53351,
-          "pubdate": 1791546281,
-          "pic": "https://i0.hdslb.com/bfs/archive/14321adf334d2086f303c619703840856233fdc6.jpg",
-          "duration": "2:7",
-          "author": "不当咕咕咕的鸽子"
+          "title": "林德薇恩倒影到底是怎么回事？百年伏笔收束，谁能重返天空？绝区零3.3前瞻，莫塞因特 艾尔妲 林德薇恩伏笔全解析",
+          "bvid": "BV1mKpv6vE51",
+          "play": 37153,
+          "pubdate": 1791620277,
+          "pic": "https://i2.hdslb.com/bfs/archive/85ed7eafa7f9b3a364dd52face0f19dc180d2dda.jpg",
+          "duration": "11:42",
+          "author": "Jerryprpr"
         },
         {
-          "title": "【绝区零攻略】你真的需要抽菲欧妮吗？",
-          "bvid": "BV1Mtp46EELP",
-          "play": 37589,
-          "pubdate": 1791534023,
-          "pic": "https://i1.hdslb.com/bfs/archive/c48af8981ff96b80a1a8bccb01fa81eed09561c4.jpg",
-          "duration": "3:39",
-          "author": "阿酒什么都不会"
+          "title": "AY看《根本没有这种邦布》被叶瞬邦可爱到：不用说了她复刻就有了！",
+          "bvid": "BV1y8pe6FE1a",
+          "play": 37026,
+          "pubdate": 1791597679,
+          "pic": "https://i2.hdslb.com/bfs/archive/9e74fa39dcdba9231488defd5c0239a463faea87.jpg",
+          "duration": "16:58",
+          "author": "游戏BBQ"
         },
         {
-          "title": "爽爆了！不仅有FES还有音乐会！绝区零3.3前瞻官宣2026绝区零FES布梦嘉年华和live，将于11月27日到29日，在杭州大会展中心举办",
-          "bvid": "BV1Pzpb6UExQ",
-          "play": 33397,
-          "pubdate": 1791547798,
-          "pic": "https://i2.hdslb.com/bfs/archive/fbd5f2f129ae2c99771df0ea2a6f13e80092992b.jpg",
-          "duration": "1:18",
-          "author": "不当咕咕咕的鸽子"
+          "title": "哲哥的孩子已经有一个团了",
+          "bvid": "BV1q2pe6EEL5",
+          "play": 24234,
+          "pubdate": 1791590702,
+          "pic": "https://i0.hdslb.com/bfs/archive/852dc64a1c4e65772bb4970dde5e29393674f83d.jpg",
+          "duration": "0:12",
+          "author": "流光令使30七"
         },
         {
-          "title": "天才设计！LSP之间的认可！克苟看菲欧妮皮肤惊呼道：上半身水手服！下半身四库水？这制作组里有LSP啊！我咋就没想到呢？",
-          "bvid": "BV1GWpb6fE1u",
-          "play": 29636,
-          "pubdate": 1791547232,
-          "pic": "https://i1.hdslb.com/bfs/archive/85e898cb217a8d940f425a8ce9856e5fdb4437a9.jpg",
-          "duration": "1:40",
-          "author": "双刀纸袋布"
+          "title": "当蕾米埃尔和哲的孩子长大后",
+          "bvid": "BV17xpv6QE7t",
+          "play": 22136,
+          "pubdate": 1791622800,
+          "pic": "https://i0.hdslb.com/bfs/archive/a7af6ab3a9f17b8704376b84da3d60a27f3b51d3.jpg",
+          "duration": "0:55",
+          "author": "传说级NPC"
         },
         {
-          "title": "【3.3前瞻】菲欧妮全面攻略！你真需要吗？/维琳娜/蕾米埃尔/机制拆解/规划/音擎/驱动盘/配队",
-          "bvid": "BV1HPpb6kEM4",
-          "play": 28833,
-          "pubdate": 1791549797,
-          "pic": "https://i2.hdslb.com/bfs/archive/88b52d707fb667f1eeed2cef9f304d90c7927707.jpg",
-          "duration": "4:13",
-          "author": "毕加丶"
+          "title": "【绝区零】论蕾米埃尔大军的制造速度(哲没跑掉)",
+          "bvid": "BV1LPpa6gEtB",
+          "play": 13863,
+          "pubdate": 1791590940,
+          "pic": "https://i2.hdslb.com/bfs/archive/ccdcd7259b7e9e394706b531f741ee59c1f4fbbe.jpg",
+          "duration": "0:15",
+          "author": "传说级NPC"
         }
       ],
       "history": [
         {
           "title": "《绝区零》先导演示丨蕾米埃尔",
           "bvid": "BV1wULQ64EB9",
-          "play": 5122859,
+          "play": 5124342,
           "pubdate": 1781920800,
           "pic": "https://i0.hdslb.com/bfs/archive/4373a99ec734fa760ccab2161d38ef6294815f24.jpg",
           "duration": "1:31",
@@ -358,7 +358,7 @@
         {
           "title": "《绝区零》蕾米埃尔EP | Two to Tango 交缠舞步",
           "bvid": "BV1jhgf6pEJw",
-          "play": 4776121,
+          "play": 4786117,
           "pubdate": 1785124800,
           "pic": "https://i1.hdslb.com/bfs/archive/aca4ee6607e39b696138167cd70bf73932cf39fd.jpg",
           "duration": "16:40",
@@ -367,7 +367,7 @@
         {
           "title": "【蕾米埃尔】：入木三分，原来是字面意思？",
           "bvid": "BV1bLth6rE1T",
-          "play": 4273701,
+          "play": 4276034,
           "pubdate": 1788169737,
           "pic": "https://i0.hdslb.com/bfs/archive/259c520165891305d3b49140ec2a3911d756a1f2.jpg",
           "duration": "114:51",
@@ -376,7 +376,7 @@
         {
           "title": "《绝区零》蕾米埃尔角色展示 | 恰如往昔",
           "bvid": "BV11Aga6oENR",
-          "play": 4237647,
+          "play": 4239486,
           "pubdate": 1784865600,
           "pic": "https://i0.hdslb.com/bfs/archive/36a3d4b0b4c3e4dac71910441e3de64565f81c5b.jpg",
           "duration": "21:0",
@@ -385,7 +385,7 @@
         {
           "title": "《绝区零》蕾米埃尔动画短片 | 静默之日",
           "bvid": "BV1fk3E61Eu5",
-          "play": 3604436,
+          "play": 3605441,
           "pubdate": 1785060000,
           "pic": "https://i2.hdslb.com/bfs/archive/f5abb9a175f82b0491ae84157eb3851dfcd0bee9.jpg",
           "duration": "24:47",
@@ -394,7 +394,7 @@
         {
           "title": "绝区零剧情合集第二季4K（合集收录绝区零主线2.0至2.8版本，新版本请到）",
           "bvid": "BV1NPTKz8EQe",
-          "play": 2775943,
+          "play": 2777637,
           "pubdate": 1749180023,
           "pic": "https://i2.hdslb.com/bfs/archive/1edf2d5153897f21af49d58dc32a1f937de89883.jpg",
           "duration": "4210:56",
@@ -403,7 +403,7 @@
         {
           "title": "我逮住蕾米埃尔了！",
           "bvid": "BV1d23r6GEqQ",
-          "play": 2705758,
+          "play": 2709755,
           "pubdate": 1785296320,
           "pic": "https://i1.hdslb.com/bfs/archive/a3cc0c236e5bb5480898f64164b745fdff80bb34.jpg",
           "duration": "4:53",
@@ -412,7 +412,7 @@
         {
           "title": "当你以为自己稳稳拿下时",
           "bvid": "BV1Nvuk6QE1c",
-          "play": 2626014,
+          "play": 2628012,
           "pubdate": 1786494600,
           "pic": "https://i0.hdslb.com/bfs/archive/7ad3f397a0e3163439348866ce55b22d7d9d92bd.jpg",
           "duration": "0:32",
@@ -421,7 +421,7 @@
         {
           "title": "真戴2.6米大翅膀跳30分钟啊‼️",
           "bvid": "BV1qr3t6uE4L",
-          "play": 2278037,
+          "play": 2280212,
           "pubdate": 1785470700,
           "pic": "https://i0.hdslb.com/bfs/archive/a31132446f67ad267e2d5589843adf755f6be5b4.jpg",
           "duration": "31:23",
@@ -430,7 +430,7 @@
         {
           "title": "Tiny Giant (Remix) | Zenless Zone Zero",
           "bvid": "BV1Ep3M6SEiC",
-          "play": 2231354,
+          "play": 2234803,
           "pubdate": 1784991600,
           "pic": "https://i2.hdslb.com/bfs/archive/6f29b69b24c369a324b7564c11a91dd4b04c2ee3.jpg",
           "duration": "2:56",
